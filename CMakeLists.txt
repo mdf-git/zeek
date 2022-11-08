@@ -457,6 +457,7 @@ if ( NOT DISABLE_SPICY )
     endif ()
 
     string(APPEND ZEEK_INCLUDE_PLUGINS ";${SPICY_PLUGIN_PATH}")
+    include(SpicyAnalyzer)
 endif ()
 
 include_directories(BEFORE
