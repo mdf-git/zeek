@@ -60,7 +60,7 @@ commit)::
 pcap-based Corpus
 `````````````````
 
-A corpus can also be generated from representative pcp files using the
+A corpus can also be generated from representative pcap files using the
 ``pcap-to-pkt`` application from pcap_simplify_. The fuzzers only handle a
 single connection at a time, so pcap files with multiple connections will
 need to be split using ``PcapSplitter`` from PcapPlusPlus_ or something

@@ -8,6 +8,7 @@
 #include <mem.h>
 #endif
 
+#include <cstdio>
 #include <cstring>
 
 namespace zeek::detail
@@ -22,7 +23,10 @@ bool FuzzBuffer::Valid(int chunk_count_limit) const
 		return false;
 
 	if ( ExceedsChunkLimit(chunk_count_limit) )
+		{
+		fprintf(stderr, "Buffer has more than %d chunks. Bailing out.\n", chunk_count_limit);
 		return false;
+		}
 
 	return true;
 	}
